@@ -15,7 +15,6 @@ import java.util.stream.StreamSupport;
 
 @RestController
 @RequestMapping("/api/stylists")
-@CrossOrigin(origins = {"http://precisionApptManager:8080", "http://localhost:8080"})
 public class StylistController {
 
     @Autowired

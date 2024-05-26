@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.*;
 
 
 @Controller
-@CrossOrigin(origins={"http://precisionApptManager:8080", "http://localhost:8080"})
 public class SpaController {
 
     /**

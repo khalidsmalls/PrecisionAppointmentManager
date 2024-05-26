@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/reports/stylistsAggregateReport")
-@CrossOrigin(origins = {"http://precisionApptManager:8080", "http://localhost:8080"})
 public class StylistsAggregateReportController {
 
     @Autowired

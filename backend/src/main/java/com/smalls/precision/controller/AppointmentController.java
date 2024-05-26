@@ -16,7 +16,6 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/api/appointments", produces = "application/json")
-@CrossOrigin(origins = {"http://precisionApptManager:8080", "http://localhost:8080"})
 public class AppointmentController {
 
     @Autowired

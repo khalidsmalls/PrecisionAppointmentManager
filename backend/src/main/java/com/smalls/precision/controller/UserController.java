@@ -13,7 +13,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "/api/users", produces = "application/json")
-@CrossOrigin(origins = {"http://precisionApptManager:8080", "http://localhost:8080"})
 public class UserController {
 
     @Autowired

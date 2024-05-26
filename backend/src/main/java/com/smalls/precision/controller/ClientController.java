@@ -16,7 +16,6 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(path = "/api/clients", produces = "application/json")
-@CrossOrigin(origins = {"http://precisionApptManager:8080", "http://localhost:8080"})
 public class ClientController {
 
     @Autowired

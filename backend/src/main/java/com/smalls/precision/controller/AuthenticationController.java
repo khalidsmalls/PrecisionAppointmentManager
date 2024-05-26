@@ -26,7 +26,6 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = {"http://precisionApptManager:8080", "http://localhost:8080"})
 @Data
 public class AuthenticationController {
 
