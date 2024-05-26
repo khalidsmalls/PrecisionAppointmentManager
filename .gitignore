@@ -65,6 +65,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Node.js specific files and directories
+node/
 node_modules/
 dist
 dist-ssr
