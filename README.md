@@ -18,7 +18,7 @@ if you're interested ...
 - install node packages: ``` npm install ```
 - start server: ``` npm run dev ```
 - navigate to localhost:8080
-- login with admin, admin
+- log in with admin, admin
 - have a really excellent time managing clients, users, and appointments
 
 
