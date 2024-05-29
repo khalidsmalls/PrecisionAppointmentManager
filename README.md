@@ -23,5 +23,7 @@ if you're interested ...
 - log in with admin, admin
 - have a really excellent time managing clients, users, and appointments
 
+credit to this [video](https://www.youtube.com/watch?v=TeBt0Ike_Tk&t=23s) by Unknown Koder for the authentication bits
+
 
 
