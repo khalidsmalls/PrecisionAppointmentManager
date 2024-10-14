@@ -53,7 +53,8 @@ lib/
 *.log.*
 *.backup.*
 *.swp
-backend/config.properties
+backend/src/main/resources/config.properties
+backend/src/main/resources/liquibase.properties
 
 # Logs
 logs
