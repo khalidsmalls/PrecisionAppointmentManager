@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_appointments_view
+      author: khalidsmalls
+      changes:
+        - createView:
+            fullDefinition: false
+            selectQuery: |-
+              SELECT a.appointment_id,
+                  a.title,
+                  a.description,
+                  c.client_id,
+                  (((c.first_name)::text || ' '::text) || (c.last_name)::text) AS client,
+                  c.email AS client_email,
+                  c.phone AS client_phone,
+                  (((s.first_name)::text || ' '::text) || (s.last_name)::text) AS stylist,
+                  a.start_time,
+                  a.end_time,
+                  u.username,
+                  u.user_id
+                 FROM (((appointments a
+                   JOIN clients c USING (client_id))
+                   JOIN stylists s USING (stylist_id))
+                   JOIN users u ON ((a.user_id = u.user_id)))
+                ORDER BY ((a.start_time)::date) DESC, ((a.start_time)::time without time zone);
+            viewName: appointments_view

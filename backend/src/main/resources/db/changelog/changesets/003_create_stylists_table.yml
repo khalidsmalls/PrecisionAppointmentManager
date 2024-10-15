@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_stylists_table
+      author: khalidsmalls
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: stylists_pkey
+                  name: stylist_id
+                  type: INTEGER
+              - column:
+                  constraints:
+                    nullable: false
+                  name: first_name
+                  type: VARCHAR(25)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: last_name
+                  type: VARCHAR(25)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: email
+                  type: VARCHAR(50)
+              - column:
+                  name: phone
+                  type: VARCHAR(20)
+            tableName: stylists

@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_user_roles_table
+      author: khalidsmalls
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: user_roles_pkey
+                  name: user_id
+                  type: INTEGER
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: user_roles_pkey
+                  name: role_id
+                  type: INTEGER
+            tableName: user_roles

@@ -58,6 +58,10 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
+			<groupId>org.liquibase</groupId>
+			<artifactId>liquibase-core</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -98,6 +102,15 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.liquibase</groupId>
+				<artifactId>liquibase-maven-plugin</artifactId>
+				<version>4.20.0</version>
+				<configuration>
+					<propertyFile>src/main/resources/liquibase.properties</propertyFile>
+					<outputChangeLogFile>src/main/resources/db/changelog/db.changelog.yml</outputChangeLogFile>
 				</configuration>
 			</plugin>
 		</plugins>

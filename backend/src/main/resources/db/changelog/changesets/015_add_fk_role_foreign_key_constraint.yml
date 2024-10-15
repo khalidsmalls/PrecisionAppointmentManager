@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: add_fk_role_foreign_key_constraint
+      author: khalidsmalls
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: role_id
+            baseTableName: user_roles
+            constraintName: fk_role
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: role_id
+            referencedTableName: roles
+            validate: true

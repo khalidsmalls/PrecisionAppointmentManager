@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_stylists_report_view
+      author: khalidsmalls
+      changes:
+        - createView:
+            fullDefinition: false
+            selectQuery: |-
+              SELECT a.appointment_id,
+                  a.title,
+                  (((s.first_name)::text || ' '::text) || (s.last_name)::text) AS stylist,
+                  (((c.first_name)::text || ' '::text) || (c.last_name)::text) AS client,
+                  a.description,
+                  a.start_time
+                 FROM ((appointments a
+                   JOIN stylists s USING (stylist_id))
+                   JOIN clients c USING (client_id))
+                ORDER BY s.last_name, ((a.start_time)::date) DESC, ((a.start_time)::time without time zone);
+            viewName: stylists_report_view

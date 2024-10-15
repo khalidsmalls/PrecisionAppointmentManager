@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: add_fk_stylist_foreign_key_constraint
+      author: khalidsmalls
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: stylist_id
+            baseTableName: appointments
+            constraintName: fk_stylist
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: stylist_id
+            referencedTableName: stylists
+            validate: true

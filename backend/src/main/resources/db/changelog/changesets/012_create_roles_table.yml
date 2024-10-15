@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_roles_table
+      author: khalidsmalls
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: roles_pkey
+                  name: role_id
+                  type: INTEGER
+              - column:
+                  name: authority
+                  type: VARCHAR(25)
+            tableName: roles

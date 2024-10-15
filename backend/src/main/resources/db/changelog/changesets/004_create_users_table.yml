@@ -1,0 +1,26 @@
+databaseChangeLog:
+- changeSet:
+    id: create_users_table
+    author: khalidsmalls
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: users_pkey
+            name: user_id
+            type: INTEGER
+        - column:
+            constraints:
+              nullable: false
+            name: username
+            type: VARCHAR(50)
+        - column:
+            constraints:
+              nullable: false
+            name: password
+            type: VARCHAR(71)
+        tableName: users

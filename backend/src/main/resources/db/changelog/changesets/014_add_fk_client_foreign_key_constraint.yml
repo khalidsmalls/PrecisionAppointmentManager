@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: add_fk_client_foreign_key_constraint
+      author: khalidsmalls
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: client_id
+            baseTableName: appointments
+            constraintName: fk_client
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: CASCADE
+            onUpdate: NO ACTION
+            referencedColumnNames: client_id
+            referencedTableName: clients
+            validate: true

@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_stylists_aggregate_report_view
+      author: khalidsmalls
+      changes:
+        - createView:
+            fullDefinition: false
+            selectQuery: |-
+              SELECT s.stylist_id,
+                  (((s.first_name)::text || ' '::text) || (s.last_name)::text) AS stylist,
+                  count(a.stylist_id) AS total_appointments
+                 FROM (stylists s
+                   JOIN appointments a USING (stylist_id))
+                GROUP BY s.stylist_id
+                ORDER BY s.stylist_id;
+            viewName: stylists_aggregate_report_view

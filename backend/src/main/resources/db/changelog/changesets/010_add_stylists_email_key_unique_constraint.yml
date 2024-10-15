@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: add_stylists_email_key_unique_constraint
+      author: khalidsmalls
+      changes:
+        - addUniqueConstraint:
+            columnNames: email
+            constraintName: stylists_email_key
+            tableName: stylists
